@@ -6,13 +6,13 @@ import pandas as pd
 app=Flask(__name__)
 
 # Loaded the model
-model=pickle.load(open('heart.pkl','rb'))
-#scale=pickle.load(open('scaling.pkl','rb'))
+model=pickle.load(open('diabetes.pkl','rb'))
+
 
 
 @app.route('/')
 def home():
-    return render_template('heart.html')
+    return render_template('diabetes.html')
 
 
 # @app.route('/heart_api',methods=['POST'])
@@ -31,15 +31,15 @@ def home():
     
 
 
-@app.route('/predict1',methods=['POST'])
-def predict1():
+@app.route('/predict2',methods=['POST'])
+def predict2():
     data1=[float(x) for x in request.form.values()]
     data1=np.array(data1).reshape(1,-1)
     output=model.predict(data1)[0]
     if output==1:
-         return render_template("heart.html",prediction_text="The person is having heart disease")
+         return render_template("diabetes.html",prediction_text="The person is having diabetes disease")
     else:
-        return render_template("heart.html",prediction_text="The person is safe")
+        return render_template("diabetes.html",prediction_text="The person is safe")
 
 
 

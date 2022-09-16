@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="predictform">
+        <form action="{{ url_for('predict2')}}" method="post">
+            <input type="text" name="Glucose" placeholder="Glucose" required="required"/> <br>
+            <input type="text" name="BloodPressure" required="required" placeholder="BloodPressure" /> <br>
+            <input type="text" name="Insulin" required="required" placeholder="Insulin" /> <br>
+            <input type="text" name="BMI" required="required" placeholder="BMI" /> <br>
+            <input type="text" name="DiabetesPedigreeFunction" required="required" placeholder="DiabetesPedigreeFunction" /> <br>
+            <input type="text" name="Age" required="required" placeholder="Age" /> <br>
+            <button type="submit">Predict</button>
+    
+    </form>
+        </div>
+
+        <div id="prediction_text">{{prediction_text}}</div>
+</body>
+</html>

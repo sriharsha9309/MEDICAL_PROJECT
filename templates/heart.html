@@ -7,6 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>heart</h1>
+
+    <div class="predictform">
+        <form action="{{ url_for('predict1')}}" method="post">
+            <input type="text" name="Age" placeholder="Age" required="required"/> <br>
+            <input type="text" name="Sex" required="required" placeholder="Sex" /> <br>
+            <input type="text" name="ChestPain" required="required" placeholder="ChestPain" /> <br>
+            <input type="text" name="RestingBP" required="required" placeholder="RestingBP" /> <br>
+            <input type="text" name="Cholesterol	" required="required" placeholder="Cholesterol	" /> <br>
+            <input type="text" name="FastingBS" required="required" placeholder="FastingBS" /> <br>
+            <input type="text" name="RestingECG" required="required" placeholder="RestingECG" /> <br>
+            <input type="text" name="MaxHR" required="required" placeholder="MaxHR" /> <br>
+            <input type="text" name="ExerciseAngina" required="required" placeholder="ExerciseAngina" /> <br>
+            <input type="text" name="ST_Slope" required="required" placeholder="ST_Slope" /> <br>
+            <button type="submit">Predict</button>
+    
+    </form>
+        </div>
+
+        <div id="prediction_text">{{prediction_text}}</div>
+    
 </body>
 </html>

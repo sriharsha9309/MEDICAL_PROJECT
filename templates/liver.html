@@ -1,0 +1,18 @@
+<div class="predictform">
+    <form action="{{ url_for('predict4')}}" method="post">
+        <input type="text" name="Age" placeholder="Age" required="required"/> <br>
+        <input type="text" name="Gender" required="required" placeholder="Gender" /> <br>
+        <input type="text" name="Total_Bilirubin" required="required" placeholder="Total_Bilirubin" /> <br>
+        <input type="text" name="Direct_Bilirubin" required="required" placeholder="Direct_Bilirubin" /> <br>
+        <input type="text" name="Alkaline_Phosphotase" required="required" placeholder="Alkaline_Phosphotase" /> <br>
+        <input type="text" name="Alamine_Aminotransferase" required="required" placeholder="Alamine_Aminotransferase" /> <br>
+        <input type="text" name="Aspartate_Aminotransferase" required="required" placeholder="Aspartate_Aminotransferase" /> <br>
+        <input type="text" name="Total_Protiens" required="required" placeholder="Total_Protiens" /> <br>
+        <input type="text" name="Albumin" required="required" placeholder="Albumin" /> <br>
+        <input type="text" name="Albumin_and_Globulin_Ratio" required="required" placeholder="Albumin_and_Globulin_Ratio" /> <br>
+        <button type="submit">Predict</button>
+
+</form>
+    </div>
+
+    <div id="prediction_text">{{prediction_text}}</div>
